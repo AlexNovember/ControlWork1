@@ -59,9 +59,9 @@ internal class Program
         {
             if (StringMassive[i].Length <= SymbolLimit)    // отбор по количеству знаков
                 if (i != StringMassive.Length - 1)        // выводим строки и делаем вывод согласно примера
-                    Console.Write($"{StringMassive[i]}, "); // убирая последнюю запятую
+                    Console.Write("\"" +StringMassive[i] +"\"" +", "); // убирая последнюю запятую
                 else
-                    Console.Write($"{StringMassive[i]}"); ;
+                    Console.Write("\"" +StringMassive[i] +"\"" +"");
         }
         Console.Write("]");
     }

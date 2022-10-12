@@ -58,3 +58,38 @@ Console.Write($"{StringMassive[i]}, ");
 Console.Write($"{StringMassive[i]}");
 Console.Write("]");
 ```  
+### Пример вывода:
+``` 
+Введите данные массива (для завершения нажмите клавишу Enter):
+hello
+2
+world
+:-
+
+[2, :-]
+``` 
+### Пример вывода c ковычками (как в примере):
+Добавили ковычки
+``` 
+Console.Write("[");
+    for (int i = 0; i < StringMassive.Length; i++)  //cчетчик
+        {
+            if (StringMassive[i].Length <= SymbolLimit)   
+                if (i != StringMassive.Length - 1)       
+                    Console.Write("\"" +StringMassive[i] +"\"" +", "); 
+                    Console.Write("\"" +StringMassive[i] +"\"" +"");
+        }
+    Console.Write("]");
+``` 
+
+Выводится так
+``` 
+Введите данные массива (для завершения нажмите клавишу Enter):
+hello
+2
+world
+:-
+
+["2", ":-"]
+``` 
+    
