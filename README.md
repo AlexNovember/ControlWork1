@@ -10,7 +10,7 @@
 
 ### **Блок-схема решения задачи**  
 
-
+![диаграмма](diagram.jpg)
 
 
 ### **Решение:**  
@@ -43,7 +43,7 @@ do
     OldMassive = new string[count];
     for (int i = 0; i < OldMassive.Length - 1; i++)
     OldMassive[i] = StringMassive[i];
-    OldMassive[count - 1] = s;
+    OldMassive[count - 1] = EnterData;
     StringMassive = OldMassive;  
 while (EnterData != "");
 ```  
