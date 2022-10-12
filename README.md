@@ -6,6 +6,12 @@
 > ### ["hello", "2", "world", ":-)"] -> ["2", ":-)"]
 > ### ["1234", "1567", "-2", "computer science"] -> ["-2"]
 > ### ["Russia", "Denmark", "Kazan"] -> []  
+  
+
+### **Блок-схема решения задачи**  
+
+
+
 
 ### **Решение:**  
 
@@ -20,7 +26,7 @@
 1. String[] StringMassive;
 2. int count;
 3. int SymbolLimit = 3;
-4. string s;
+4. string EnterData;
 5. string[] OldMassive;
 ```
 ### Далее организуем цикл для наполнения массива данными. В данном случае массив заполняем с клавиатуры самостоятельно. Наполнение масссива выполняем через цикл __do...while__
@@ -31,15 +37,15 @@ Console.WriteLine("Введите данные массива (для завер
 count = 0;
 StringMassive = new string[count];
 do
-    s = Console.ReadLine();
-    if (s != "")
+    EnterData = Console.ReadLine();
+    if (EnterData != "")
     count++;
     OldMassive = new string[count];
     for (int i = 0; i < OldMassive.Length - 1; i++)
     OldMassive[i] = StringMassive[i];
     OldMassive[count - 1] = s;
     StringMassive = OldMassive;  
-while (s != "");
+while (EnterData != "");
 ```  
 ### Через оператор __if__ сравниваем данные для вывода, согласно условию задачи (ограничение по количеству знаков) и циклом выводим данные, которые соответствуют условию. Добавляем скобки и дополнительно через условие __if...else__ убираем из вывода последнюю запятую, согласно примера вывода.  
 ```  
